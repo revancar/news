@@ -57,6 +57,7 @@ class FavoriteActivity : AppCompatActivity() {
             if (dataArticle != null){
                 articleAdapter.setData(dataArticle)
                 binding.textView.visibility = View.VISIBLE
+                binding.viewEmpty.root.visibility =if (dataArticle.isNotEmpty()) View.GONE else View.VISIBLE
             }
         })
         with(binding.nested.rvArticle) {

@@ -25,6 +25,12 @@
         android:visibility="gone"
         />
 
+    <include
+        android:id="@+id/view_empty"
+        layout="@layout/view_empty"
+        android:visibility="gone"
+         />
+
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

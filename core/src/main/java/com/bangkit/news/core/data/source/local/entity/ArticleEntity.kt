@@ -8,7 +8,6 @@ import androidx.room.PrimaryKey
 import kotlinx.android.parcel.Parcelize
 
 @Entity(tableName = "tb_article")
-@Parcelize
 data class ArticleEntity (
 
     @PrimaryKey
@@ -41,4 +40,4 @@ data class ArticleEntity (
     var isFavorite: Boolean = false
 
 
-):Parcelable
+)

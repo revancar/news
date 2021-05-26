@@ -4,5 +4,6 @@
     <string name="description">Description</string>
     <string name="publishedAt">Published At</string>
     <string name="author">Author</string>
+    <string name="imagearticle">imageArticle</string>
 
 </resources>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="title">Title</string>
+    <string name="description">Description</string>
+    <string name="publishedAt">Published At</string>
+    <string name="author">Author</string>
+
+</resources>

@@ -13,4 +13,6 @@
     <string name="favorite">Favorite</string>
     <string name="menufavorite">menuFavorite</string>
     <string name="title_dynamicfeature">Favorite</string>
+    <string name="power_connected">connected</string>
+    <string name="power_disconnected">disconnected</string>
 </resources>

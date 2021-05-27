@@ -13,5 +13,5 @@
     <string name="favorite">Favorite</string>
     <string name="menufavorite">menuFavorite</string>
     <string name="title_dynamicfeature">Favorite</string>
-    <string name="no_data">No Favorite For Now</string>
+    <string name="no_data">no data</string>
 </resources>

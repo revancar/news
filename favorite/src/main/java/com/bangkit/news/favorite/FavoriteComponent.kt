@@ -4,8 +4,6 @@ import android.content.Context
 import com.bangkit.news.di.FavoriteModuleDepedencies
 import dagger.BindsInstance
 import dagger.Component
-import dagger.hilt.android.HiltAndroidApp
-import javax.inject.Singleton
 
 
 @Component(dependencies = [FavoriteModuleDepedencies::class])

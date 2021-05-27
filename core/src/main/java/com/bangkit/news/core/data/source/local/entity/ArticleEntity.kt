@@ -1,9 +1,8 @@
 package com.bangkit.news.core.data.source.local.entity
+
 import android.os.Parcelable
-import androidx.annotation.NonNull
 import androidx.room.ColumnInfo
 import androidx.room.Entity
-
 import androidx.room.PrimaryKey
 import kotlinx.android.parcel.Parcelize
 

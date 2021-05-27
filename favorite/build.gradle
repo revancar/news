@@ -39,6 +39,7 @@ android {
         release {
             minifyEnabled false
             shrinkResources false
+            multiDexEnabled true
         }
     }
 }

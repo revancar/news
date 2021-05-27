@@ -2,7 +2,6 @@ package com.bangkit.news.core.domain.usecase
 
 import com.bangkit.news.core.domain.model.Article
 import com.bangkit.news.core.domain.repository.iArticleRepository
-import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 
 

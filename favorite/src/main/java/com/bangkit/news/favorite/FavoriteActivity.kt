@@ -1,19 +1,16 @@
 package com.bangkit.news.favorite
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import androidx.activity.viewModels
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.bangkit.news.DaggerMyApplication_HiltComponents_SingletonC
 import com.bangkit.news.core.ui.ArticleAdapter
+import com.bangkit.news.di.FavoriteModuleDepedencies
 import com.bangkit.news.favorite.databinding.ActivityFavoriteBinding
 import com.bangkit.news.ui.detail.DetailActivity
-import com.bangkit.news.di.FavoriteModuleDepedencies
-import dagger.hilt.android.AndroidEntryPoint
 import dagger.hilt.android.EntryPointAccessors
-import dagger.internal.DaggerCollections
 import javax.inject.Inject
 
 
@@ -57,6 +54,7 @@ class FavoriteActivity : AppCompatActivity() {
             if (dataArticle != null){
                 articleAdapter.setData(dataArticle)
                 binding.textView.visibility = View.VISIBLE
+                binding.viewEmpty.root.visibility = if (dataArticle.isNotEmpty()) View.GONE else View.VISIBLE
             }
         })
         with(binding.nested.rvArticle) {

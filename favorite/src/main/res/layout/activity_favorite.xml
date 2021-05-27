@@ -7,6 +7,7 @@
 
     tools:context=".FavoriteActivity">
 
+
     <ProgressBar
         android:id="@+id/progress_bar"
         style="?android:attr/progressBarStyle"
@@ -34,5 +35,10 @@
         <include android:id="@+id/nested" layout="@layout/recycler"/>
 
     </androidx.core.widget.NestedScrollView>
+
+    <include
+        android:id="@+id/view_empty"
+        layout="@layout/view_empty"
+        android:visibility="gone" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

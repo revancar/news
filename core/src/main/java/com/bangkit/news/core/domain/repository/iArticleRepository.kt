@@ -6,7 +6,7 @@ import kotlinx.coroutines.flow.Flow
 
 interface iArticleRepository {
 
-    fun getAllArticle(): Flow<com.bangkit.news.core.data.source.Resource<List<Article>>>
+    fun getAllArticle(): Flow<Resource<List<Article>>>
 
     fun getFavouriteArticle(): Flow<List<Article>>
 

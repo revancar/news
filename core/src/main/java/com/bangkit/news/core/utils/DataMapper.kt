@@ -6,10 +6,10 @@ import com.bangkit.news.core.domain.model.Article
 
 object DataMapper {
 
-    fun mapResponseToEntities(input: List<ArticleResponse>): List<com.bangkit.news.core.data.source.local.entity.ArticleEntity> {
-        val articleList = ArrayList<com.bangkit.news.core.data.source.local.entity.ArticleEntity>()
+    fun mapResponseToEntities(input: List<ArticleResponse>): List<ArticleEntity> {
+        val articleList = ArrayList<ArticleEntity>()
         input.map {
-            val article = com.bangkit.news.core.data.source.local.entity.ArticleEntity(
+            val article = ArticleEntity(
                 id = it.id,
                 name = it.name,
                 author = it.author,
@@ -25,7 +25,7 @@ object DataMapper {
         return articleList
     }
 
-    fun mapEntitiesToDomain(input: List<com.bangkit.news.core.data.source.local.entity.ArticleEntity>): List<Article> =
+    fun mapEntitiesToDomain(input: List<ArticleEntity>): List<Article> =
         input.map {
             Article(
                 id = it.id,
@@ -41,7 +41,7 @@ object DataMapper {
         }
 
     fun mapDomainToEntity(input: Article) =
-        com.bangkit.news.core.data.source.local.entity.ArticleEntity(
+        ArticleEntity(
             id = input.id,
             name = input.name,
             author = input.author,

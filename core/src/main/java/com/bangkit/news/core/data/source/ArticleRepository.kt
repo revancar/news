@@ -15,13 +15,13 @@ import javax.inject.Singleton
 
 @Singleton
 class ArticleRepository @Inject constructor(
-    private val remoteDataSource: com.bangkit.news.core.data.source.remote.RemoteDataSource,
-    private val localDataSource: com.bangkit.news.core.data.source.local.LocalDataSource,
+    private val remoteDataSource: RemoteDataSource,
+    private val localDataSource: LocalDataSource,
     private val appExecutors: AppExecutors
 ) : iArticleRepository{
 
 
-    override fun getAllArticle(): Flow<com.bangkit.news.core.data.source.Resource<List<Article>>> =
+    override fun getAllArticle(): Flow<Resource<List<Article>>> =
         object : com.bangkit.news.core.data.source.NetworkBoundResource<List<Article>, List<ArticleResponse>>(){
             override fun loadFromDB(): Flow<List<Article>> {
                 return localDataSource.getAllArticles().map {

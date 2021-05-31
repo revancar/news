@@ -7,11 +7,6 @@
 
     tools:context=".ui.home.MainActivity">
 
-    <TextView
-        android:id="@+id/tv_power_status"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:visibility="invisible"/>
 
     <ProgressBar
         android:id="@+id/progress_bar"

@@ -11,7 +11,6 @@
     <string name="sub_author">Author:</string>
     <string name="content">Content</string>
     <string name="favorite">Favorite</string>
-    <string name="menufavorite">menuFavorite</string>
     <string name="title_dynamicfeature">Favorite</string>
     <string name="no_data">no data</string>
 </resources>

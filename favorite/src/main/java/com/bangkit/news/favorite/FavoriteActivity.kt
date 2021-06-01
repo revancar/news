@@ -59,11 +59,6 @@ class FavoriteActivity : AppCompatActivity() {
             }
         })
 
-//        binding.apply {
-//            nested.rvArticle.layoutManager = LinearLayoutManager(this@FavoriteActivity)
-//            nested.rvArticle.setHasFixedSize(true)
-//            nested.rvArticle.adapter = articleAdapter
-//        }
         with(binding.nested.rvArticle){
             layoutManager = LinearLayoutManager(this@FavoriteActivity)
             setHasFixedSize(true)

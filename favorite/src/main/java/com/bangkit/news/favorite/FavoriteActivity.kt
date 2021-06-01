@@ -6,6 +6,7 @@ import android.view.View
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
+import kotlinx.android.synthetic.main.*
 import com.bangkit.news.core.ui.ArticleAdapter
 import com.bangkit.news.di.FavoriteModuleDepedencies
 import com.bangkit.news.favorite.databinding.ActivityFavoriteBinding
@@ -53,14 +54,21 @@ class FavoriteActivity : AppCompatActivity() {
         favoriteViewModel.favoriteArticle.observe(this, { dataArticle ->
             if (dataArticle != null){
                 articleAdapter.setData(dataArticle)
-                binding.textView.visibility = View.VISIBLE
+                binding.favTitle.visibility = View.VISIBLE
                 binding.viewEmpty.root.visibility = if (dataArticle.isNotEmpty()) View.GONE else View.VISIBLE
             }
         })
-        with(binding.nested.rvArticle) {
+
+//        binding.apply {
+//            nested.rvArticle.layoutManager = LinearLayoutManager(this@FavoriteActivity)
+//            nested.rvArticle.setHasFixedSize(true)
+//            nested.rvArticle.adapter = articleAdapter
+//        }
+        with(binding.nested.rvArticle){
             layoutManager = LinearLayoutManager(this@FavoriteActivity)
             setHasFixedSize(true)
             adapter = articleAdapter
         }
+
     }
 }

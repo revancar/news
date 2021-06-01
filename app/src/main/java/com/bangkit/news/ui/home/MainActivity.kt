@@ -9,7 +9,6 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
-import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bangkit.news.R
@@ -53,7 +52,7 @@ class MainActivity : AppCompatActivity() {
                     }
                     is com.bangkit.news.core.data.source.Resource.Error -> {
                         binding.progressBar.visibility = View.GONE
-                        Toast.makeText(this, "Terjadi kesalahan", Toast.LENGTH_SHORT).show()
+                        binding.viewError.root.visibility = if (article.data!!.isNotEmpty()) View.GONE else View.VISIBLE
                     }
                 }
             }

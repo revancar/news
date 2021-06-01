@@ -36,5 +36,10 @@
 
 </androidx.core.widget.NestedScrollView>
 
+    <include
+        android:id="@+id/view_error"
+        layout="@layout/view_error"
+        android:visibility="gone" />
+
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
